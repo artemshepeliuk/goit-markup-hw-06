@@ -306,13 +306,13 @@ ul {
     font-style: normal;
     display: flex;
     align-items: center;
+    padding-bottom: 48px;
 }
 
 .address-list {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 48px;
 }
 
 .address-link {
@@ -393,9 +393,12 @@ ul {
     /* #endregion */
 
     /* #region Address */
+        .address {
+            padding-bottom: 0;
+        }
+
         .address-list {
             gap: 12px;
-            margin-bottom: 0;
         }
 
         .address-link {
@@ -487,12 +490,12 @@ ul {
 
 .hero-title {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--color-white);
-    max-width: 496px;
+    max-width: 215px;
     margin-bottom: 72px;
 }
 
@@ -526,7 +529,10 @@ ul {
     }
 
     .hero-title {
+        font-size: 56px;
         margin-bottom: 36px;
+        line-height: 1.07;
+        max-width: 496px;
     }
 }
 
@@ -1010,18 +1016,11 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 288px;
-    min-height: 623px;
     background-color: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
-}
-
-@media (min-width: 768px) {
-    .modal {
-        width: 408px;
-    }
+    padding: 72px 16px 24px 16px;
 }
 
 .modal-close-btn {
@@ -1152,6 +1151,11 @@ ul {
     color: var(--color-subtle);
 }
 
+.checkbox-label-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .checkbox-icon-container {
     display: inline-flex;
     align-items: center;
@@ -1169,7 +1173,6 @@ ul {
 .privacy-policy-link {
     color: var(--color-primary);
     text-decoration: underline;
-    padding-left: 3px;
 }
 
 .checkbox:checked+.checkbox-label>.checkbox-icon-container {
@@ -1208,6 +1211,17 @@ ul {
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (min-width: 768px) {
+    .modal {
+        width: 408px;
+    }
+
+    .checkbox-label-text {
+        display: block;
+    }
+}
+
 /* #endregion */
 
 
